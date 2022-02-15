@@ -33,6 +33,7 @@ const Login = () => {
                 alert('Login Successful!');
                 history.push('/main')
                 localStorage.setItem('login', JSON.stringify(existingUser));
+                
               } else {
                 alert('Password Invalid!');
               }
@@ -41,6 +42,7 @@ const Login = () => {
             alert('Login Failed, Invalid Credentials!');
           }
         }
+        window.location.reload();
       };
 
     return(
@@ -93,7 +95,9 @@ import React from "react";
 import "./login.component.css";
 import { useState, useEffect } from 'react';
 import { useFetch } from "./useFetch";
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+
+
 
 const url = 'http://127.0.0.1:8000/user/';
 
@@ -103,6 +107,7 @@ const Login = () => {
   const [email_id, setEmail] = useState('');
   const [pwd, setPassword] = useState('');
 
+  
     useEffect(() => {
         if (localStorage.getItem('login')) {
           let retrivedData = JSON.parse(localStorage.getItem('login'));
@@ -119,8 +124,9 @@ const Login = () => {
               if (existingUser.pwd === pwd) {
                 console.log("Success!");
                 alert('Login Successful!');
-                history.push('/user')
+                history.push('/main')
                 localStorage.setItem('login', JSON.stringify(existingUser));
+                
               } else {
                 alert('Password Invalid!');
               }
@@ -129,6 +135,7 @@ const Login = () => {
             alert('Login Failed, Invalid Credentials!');
           }
         }
+        window.location.reload();
       };
 
     return(
@@ -140,7 +147,7 @@ const Login = () => {
             <div className="form-group">
                 <label>Email Id</label>
                 <input type="email" name='email_id' className="form-control" value={email_id} onChange={(e) => setEmail(e.target.value)} placeholder="Enter Email Id" required />
-            </div>
+            </div> 
 
             <div className="form-group">
                 <label>Password</label>
@@ -150,7 +157,10 @@ const Login = () => {
             <div className="text-center">
             <button type="submit" className="btn btn-dark btn-lg btn-block">Sign In</button>
             </div>
-          </form>  
+          </form> <br /> 
+          <p style={{ textAlign: 'center' }}>
+            Not yet Registered? <Link to='/sign-up'>Sign Up</Link>
+          </p>
         </div>
       </div>       
     );
@@ -158,6 +168,7 @@ const Login = () => {
 
 
 export default Login
+
 
 
 supermaincode */

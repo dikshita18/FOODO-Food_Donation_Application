@@ -25,9 +25,13 @@ class DonateProcessSerializer(serializers.ModelSerializer):
 
 
 
+
+
+
+
 '''
 from rest_framework import serializers
-from .models import User, DonateForm, FeedbackForm
+from .models import User, DonateForm, FeedbackForm, DonateProcess
 from rest_framework.authtoken.views import Token
 
 class UserSerializer(serializers.ModelSerializer):
@@ -43,6 +47,12 @@ class DonateFormSerializer(serializers.ModelSerializer):
 class FeedbackFormSerializer(serializers.ModelSerializer):
     class Meta:
         model = FeedbackForm
-        fields = ('full_name','email_id','cont_no','feedback')
-        
+        fields = ('id','full_name','email_id','cont_no','feedback')
+
+class DonateProcessSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DonateProcess
+        fields = ('id','don_id')
+
+
 '''

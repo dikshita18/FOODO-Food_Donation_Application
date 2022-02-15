@@ -8,7 +8,6 @@ import { BsFillArrowDownSquareFill } from "react-icons/bs";
 import { TiLocation } from "react-icons/ti";
 
 
-
 class Feedback extends Component{
 
     constructor() {
@@ -204,6 +203,7 @@ class Feedback extends Component{
 
 
     render() {   
+
         return (
             <div className="offset-md-1 col-md-10">          
                 <br /><br /><br /><br />
@@ -281,4 +281,5 @@ class Feedback extends Component{
 
 export default Feedback
 
-*/
+
+---*/

@@ -14,14 +14,14 @@ export default class Notify extends Component {
         this.submitForm=this.submitForm.bind(this);
     }
 
-    //Input change handler
+    
     changeHandler(event){
         this.setState({
             [event.target.name]:event.target.value
         });
     }
 
-    //Submit 
+    
     submitForm(){
         fetch('http://127.0.0.1:8000/donateprocess/',{
             method:'POST',

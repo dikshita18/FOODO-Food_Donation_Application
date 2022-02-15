@@ -2,6 +2,8 @@
 import React, { Component } from "react";
 import './signup.component.css';
 import { Link } from 'react-router-dom';
+
+
 export default class SignUp extends Component {
 
     constructor(){
@@ -114,10 +116,9 @@ export default class SignUp extends Component {
 
 /* supermaincode
 
-
 import React, { Component } from "react";
 import './signup.component.css';
-
+import { Link } from 'react-router-dom';
 export default class SignUp extends Component {
 
     constructor(){
@@ -155,7 +156,6 @@ export default class SignUp extends Component {
         })
         .then(response=>response.json())
         .then((data)=>console.log(data));
-        
 
         this.setState({
             full_name:'',
@@ -172,8 +172,10 @@ export default class SignUp extends Component {
     render() {
         return (
           <div className="outer">
+            <br /><br />
             <div className="inner">
-              <form>
+            
+              <form> 
                   <h3>Sign Up</h3>
 
                   <div className="form-group">
@@ -207,14 +209,20 @@ export default class SignUp extends Component {
                   </div><br />
                   
                   <div className="text-center">
-                  <button type="submit" className="btn btn-dark btn-lg btn-block col-xs-3" align="center" onClick={this.submitForm}>Sign Up</button>
+                  <Link to="/sign-in" className="btn btn-dark btn-lg btn-block col-xs-3" align="center" onClick={this.submitForm}>Sign Up</Link>
                   </div>
-              </form>
+                </form> <br />
+                <p style={{ textAlign: 'center' }}>
+                    Already Registered? <Link to='/sign-in'>Sign In</Link>
+                </p>
             </div>
           </div>
         );
     }
 }
+
+
+
 
 
 supermaincode */
@@ -254,53 +262,3 @@ supermaincode */
 
 
 
-
-
-/*
-import React, { Component } from "react";
-
-export default class SignUp extends Component {
-    render() {
-        return (
-            <form>
-                <h3>Register</h3>
-
-                <div className="form-group">
-                    <label>Full name</label>
-                    <input type="text" className="form-control" placeholder="Full name" required/>
-                </div>
-
-                <div className="form-group">
-                    <label>Email Id</label>
-                    <input type="email" className="form-control" placeholder="Email Id" required/>
-                </div>
-
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Password" required/>
-                </div>
-
-                <div className="form-group">
-                    <label>NGO name</label>
-                    <input type="text" className="form-control" placeholder="NGO name" required/>
-                </div>
-
-                <div className="form-group">
-                    <label>Address</label>
-                    <input type="text" className="form-control" placeholder="Address" />
-                </div>
-
-                <div className="form-group">
-                    <label>Contact No.</label>
-                    <input type="text" className="form-control" placeholder="Contact No." required/>
-                </div>
-
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
-                <p className="forgot-password text-right">
-                    Already registered <a href="#">log in?</a>
-                </p>
-            </form>
-        );
-    }
-}
-*/

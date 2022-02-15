@@ -49,6 +49,12 @@ class DonateProcess(models.Model):
 
 
 
+
+
+
+
+
+
 '''
 from django.db import models
 from django.core.exceptions import ValidationError
@@ -91,4 +97,11 @@ class FeedbackForm(models.Model):
 
     def __str__(self):
         return self.full_name
+
+class DonateProcess(models.Model):
+    don_id = models.CharField(max_length=2000)
+
+    def __str__(self):
+        return self.don_id
+
 '''
