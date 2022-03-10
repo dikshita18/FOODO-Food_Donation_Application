@@ -64,8 +64,8 @@ export default class SignUp extends Component {
                   <h3>Sign Up</h3>
 
                   <div className="form-group">
-                      <label>Full name</label>
-                      <input type="text" name="full_name" onChange={this.changeHandler} className="form-control" placeholder="Full name" required/>
+                      <label>Full Name</label>
+                      <input type="text" name="full_name" onChange={this.changeHandler} className="form-control" placeholder="Full Name" required/>
                   </div>
 
                   <div className="form-group">
@@ -75,12 +75,12 @@ export default class SignUp extends Component {
 
                   <div className="form-group">
                       <label>Password</label>
-                      <input type="password" name="pwd" onChange={this.changeHandler} className="form-control" placeholder="Password" required/>
+                      <input type="password" name="pwd" onChange={this.changeHandler} className="form-control" placeholder="Password (Should be of 8 characters only.)" required/>
                   </div>
 
                   <div className="form-group">
-                      <label>NGO name</label>
-                      <input type="text" name="ngo_name" onChange={this.changeHandler} className="form-control" placeholder="NGO name" />
+                      <label>NGO Name</label>
+                      <input type="text" name="ngo_name" onChange={this.changeHandler} className="form-control" placeholder="NGO Name (Only if you are an NGO volunteer.)" />
                   </div>
 
                   <div className="form-group">

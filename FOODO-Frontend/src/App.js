@@ -10,6 +10,7 @@ import Main from "./components/main";
 import SignUp from "./components/signup.component";
 import Feedback from "./components/feedback";
 import Notify from './components/Notify';
+import Stats from './components/Stats';
 import { Route, Switch, useHistory } from 'react-router-dom';
 import { GiBowlOfRice } from "react-icons/gi";
 
@@ -53,7 +54,8 @@ export default function App() {
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/sign-up">Sign Up</Nav.Link>
           <Nav.Link href="/sign-in">Sign In</Nav.Link> 
-          <Nav.Link href="/feedback">Contact Us</Nav.Link>  
+          <Nav.Link href="/feedback">About Us</Nav.Link>  
+          <Nav.Link href="/stats">Stats</Nav.Link>
           </Nav>
           
           )         
@@ -73,7 +75,7 @@ export default function App() {
         <Route exact path="/main" component={Main} />
         <Route exact path="/notify" component={Notify} />
         <Route exact path="/feedback" component={Feedback} />
-        
+        <Route exact path="/stats" component={Stats} />
       </Switch>
 
     </div>

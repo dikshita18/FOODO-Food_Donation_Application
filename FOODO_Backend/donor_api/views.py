@@ -11,7 +11,7 @@ class UserViewSet(viewsets.ModelViewSet):
     authentication_classes = (TokenAuthentication,)
 
 class DonateFormViewSet(viewsets.ModelViewSet):
-    queryset = DonateForm.objects.all().order_by('-id')
+    queryset = DonateForm.objects.all().order_by('id')
     serializer_class = DonateFormSerializer
     authentication_classes = (TokenAuthentication,)
 
